@@ -1,5 +1,5 @@
 #!/bin/bash
-# cd to script dir 
+# cd to script dir
 script_dir=$0
 script_dir=$(realpath $script_dir)
 script_dir=$(dirname $script_dir)
