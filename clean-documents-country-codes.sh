@@ -279,7 +279,7 @@ do
 	do
 		find "$search_dir"  \
 			-iname "$clean_file$find_file" \
-	  		-exec cp -rfv {} "$dest_dir" \;
+	  		-exec rm -v {} "$dest_dir" \;
 	done
 done
 echo -e "\a\a\a\a\a\a\a\b\b\b"

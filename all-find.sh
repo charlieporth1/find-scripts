@@ -14,8 +14,8 @@ mkdir -p $dest_dir
 
 # Find and copy files with specific extensions
 
-./documents-find.sh $1 $2/documents
-./media-find.sh $1 $2/media
+./documents-find.sh $search_dir $dest_dir/documents
+./media-find.sh $search_dir $dest_dir/media
 
 echo -e "\a\a\a\a\a\b\b\b"
 echo "All document files have been copied to $dest_dir"

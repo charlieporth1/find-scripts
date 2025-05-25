@@ -11,11 +11,25 @@ search_dir="${1:-.}"
 dest_dir="$2"
 
 mkdir -p $dest_dir
+clean_files=(
+	Windows
+)
+
+find_files=(
+	wav
+	3pg
+	mp3
+)
 
 # Find and copy media files with specific extensions
-./photo-find.sh $search_dir $dest_dir/photo
-./video-find.sh $search_dir $dest_dir/video
-./audio-find.sh $search_dir $dest_dir/audio
-
+for clean_file in ${clean_files[@]}
+do
+	for find_file in ${find_files[@]}
+	do
+		find "$search_dir"  \
+			-iname "$clean_file*$find_file" \
+	  		-exec rm -v {} "$dest_dir" \;
+	done
+done
 echo -e "\a\a\a\a\a\a\a\b\b\b"
 echo "All media files have been copied to $dest_dir"

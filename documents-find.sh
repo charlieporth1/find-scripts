@@ -13,10 +13,10 @@ dest_dir="$2"
 mkdir -p $dest_dir
 
 # Find and copy files with specific extensions
-./microsoft-office-find.sh $1 $2/ms_office
-./ebooks-find.sh $1 $2/ebooks
-./openoffice-and-libreoffice-find.sh $1 $2/openoffice_and_libreoffice
-./text-and-other-find.sh $1 $2/other_and_text
+./microsoft-office-find.sh $search_dir $dest_dir/ms_office
+./ebooks-find.sh $search_dir $dest_dir/ebooks
+./openoffice-and-libreoffice-find.sh $search_dir $dest_dir/openoffice_and_libreoffice
+./text-and-other-find.sh $search_dir $dest_dir/other_and_text
 
 echo -e "\a\a\a\a\a\b\b\b"
 echo "All document files have been copied to $dest_dir"

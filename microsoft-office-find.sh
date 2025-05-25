@@ -24,7 +24,7 @@ find_files=(
 
 for find_file in ${find_files[@]}
 do
-	find "$search_dir"  \
+	find "$search_dir" \
 		-name "$find_file" \
   		-exec cp -rfv {} "$dest_dir" \;
 done
